@@ -1,0 +1,22 @@
+## 03_quick-start
+# dependencies
+/03_quick-start/node_modules
+/03_quick-start/.pnp
+/03_quick-start.pnp.js
+
+# testing
+/03_quick-start/coverage
+
+# production
+/03_quick-start/build
+
+# misc
+/03_quick-start.DS_Store
+/03_quick-start.env.local
+/03_quick-start.env.development.local
+/03_quick-start.env.test.local
+/03_quick-start.env.production.local
+
+/03_quick-startnpm-debug.log*
+/03_quick-startyarn-debug.log*
+/03_quick-startyarn-error.log*
