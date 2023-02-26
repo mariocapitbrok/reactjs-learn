@@ -1,0 +1,18 @@
+
+/* Table*/
+#nampri {
+  width: 30%;
+  min-width: 200px;
+}
+
+#nampri th {
+  text-align: left;
+}
+
+#nampri th, #nampri td {
+  border: 1px solid #ddd;
+}
+
+.price {
+  text-align: right;
+}

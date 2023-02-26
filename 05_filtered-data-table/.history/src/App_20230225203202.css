@@ -1,0 +1,4 @@
+#products th, #products td {
+  border: 1px solid #ddd;
+  min-width: 20px;
+}

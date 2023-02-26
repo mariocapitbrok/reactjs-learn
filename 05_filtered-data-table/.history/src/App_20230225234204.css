@@ -1,0 +1,22 @@
+
+/* Table*/
+#nampri {
+  width: 30%;
+  min-width: 200px;
+}
+
+#nampri th {
+  text-align: left;
+}
+
+#nampri th, #nampri td {
+  border: 1px solid #ddd;
+}
+
+td.price {
+  text-align: right;
+}
+
+th {
+  text-transform: capitalize;
+}

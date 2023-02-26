@@ -1,0 +1,13 @@
+
+#products {
+  width: 30%;
+  min-width: 200px;
+}
+#products th, #products td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.money-data {
+  text-align: right;
+}
