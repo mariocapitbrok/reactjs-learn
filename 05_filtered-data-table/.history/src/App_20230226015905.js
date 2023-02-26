@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <SearchInput />
       <ToogleOption />
-      <Table id="my-table" data={dataA} />
+      <Table id="my-table" data={dataC} />
     </div>
   )
 }

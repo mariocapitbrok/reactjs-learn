@@ -27,17 +27,13 @@ function createHeaders(data) {
 
 function createRows(data) {
   return data.map(row => {
-    const cells = createCells(row)
+    const cells = Object.entries(row).map(([key, value]) => (
+      <td key={row.id ? `${row.id}-${key}` : createUniqueId()} className={key}>
+        {value}
+      </td>
+    ))
     return <tr key={row.id || createUniqueId()}>{cells}</tr>
   })
-}
-
-function createCells(row) {
-  return Object.entries(row).map(([key, value]) => (
-    <td key={row.id ? `${row.id}-${key}` : createUniqueId()} className={key}>
-      {value}
-    </td>
-  ))
 }
 
 function createUniqueId() {

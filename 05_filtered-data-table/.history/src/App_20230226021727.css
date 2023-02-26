@@ -1,7 +1,7 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  width: 100%;
 }
 
 #my-table th {
@@ -19,13 +19,4 @@ td.price {
 th {
   text-transform: capitalize;
 }
-
-th.description {
-  min-width: 300px;
-}
-
-.image {
-  max-width: 300px;
-  overflow-wrap: break-word;
-} 
 

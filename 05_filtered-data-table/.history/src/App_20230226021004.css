@@ -1,7 +1,7 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  width: 100%;
 }
 
 #my-table th {
@@ -24,8 +24,6 @@ th.description {
   min-width: 300px;
 }
 
-.image {
-  max-width: 300px;
-  overflow-wrap: break-word;
-} 
-
+th.image {
+  max-width: 30px;
+}

@@ -2,7 +2,7 @@ import '../App.css'
 
 function Table({ id, data }) {
   const tableHeaders = createHeaders(data)
-  const tableRows = createRows(data)
+  const tableRows = createTableRows(data)
 
   return (
     <table id={id}>
@@ -25,19 +25,15 @@ function createHeaders(data) {
   return <tr>{headerCells}</tr>
 }
 
-function createRows(data) {
+function createTableRows(data) {
   return data.map(row => {
-    const cells = createCells(row)
+    const cells = Object.entries(row).map(([key, value]) => (
+      <td key={row.id ? `${row.id}-${key}` : createUniqueId()} className={key}>
+        {value}
+      </td>
+    ))
     return <tr key={row.id || createUniqueId()}>{cells}</tr>
   })
-}
-
-function createCells(row) {
-  return Object.entries(row).map(([key, value]) => (
-    <td key={row.id ? `${row.id}-${key}` : createUniqueId()} className={key}>
-      {value}
-    </td>
-  ))
 }
 
 function createUniqueId() {

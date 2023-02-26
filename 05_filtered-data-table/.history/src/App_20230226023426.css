@@ -1,7 +1,16 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  display: grid;
+  grid-template-columns: minmax(150px, 1.33fr) minmax(150px, 2.33fr);
+}
+
+#my-table thead {
+  display:contents;
+}
+
+#my-table tbody {
+  display: contents;
 }
 
 #my-table th {
@@ -27,5 +36,4 @@ th.description {
 .image {
   max-width: 300px;
   overflow-wrap: break-word;
-} 
-
+}

@@ -1,0 +1,64 @@
+/* General styles */
+table {
+  min-width: 90vw;
+  width: auto;
+  flex: 1;
+  display: grid;
+  border-collapse: collapse;
+  /* These are just initial values which are overriden using JavaScript when a column is resized */
+  grid-template-columns: 
+    minmax(150px, 0.5fr)
+    minmax(150px, 2fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 0.5fr)
+;
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 15px;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+}
+
+th {
+  top: 0;
+  text-align: left;
+  background-color: #fff;
+  text-transform: capitalize;
+  position: sticky;
+  /* position: relative; */
+}
+
+th:last-child {
+  border: 0;
+}
+
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+tr:nth-child(even) td {
+  background: #fff;
+}
+
+/*Custom styles here...*/
+#my-table th, #my-table td {
+  border: 1px solid #ddd;
+}
+
+td.price {
+  text-align: right;
+}

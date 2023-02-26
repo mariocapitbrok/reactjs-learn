@@ -1,7 +1,7 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  width: 100%;
 }
 
 #my-table th {
@@ -21,7 +21,7 @@ th {
 }
 
 th.description {
-  min-width: 300px;
+  max-width: 300px;
 }
 
 .image {

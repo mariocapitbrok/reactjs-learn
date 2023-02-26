@@ -1,7 +1,15 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  display: grid;
+}
+
+#my-table thead {
+  display:contents;
+}
+
+#my-table tbody {
+  display: contents;
 }
 
 #my-table th {
@@ -27,5 +35,4 @@ th.description {
 .image {
   max-width: 300px;
   overflow-wrap: break-word;
-} 
-
+}

@@ -1,7 +1,7 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  width: 100%;
 }
 
 #my-table th {
@@ -26,6 +26,5 @@ th.description {
 
 .image {
   max-width: 300px;
-  overflow-wrap: break-word;
-} 
-
+  text-overflow: ellipsis;
+}

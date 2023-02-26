@@ -1,7 +1,8 @@
 
 /* Table*/
 #my-table {
-  width: 50%;
+  display: grid;
+  width: 100%;
 }
 
 #my-table th {
@@ -20,12 +21,11 @@ th {
   text-transform: capitalize;
 }
 
-th.description {
+/* th.description {
   min-width: 300px;
 }
 
 .image {
   max-width: 300px;
   overflow-wrap: break-word;
-} 
-
+} */
