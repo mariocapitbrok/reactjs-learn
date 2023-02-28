@@ -1,10 +1,10 @@
-const categorizeData = require('./categorizeData')
+const groupData = require('./groupData')
 const fs = require('fs')
 
 //const COFFEES = require('../../../data/coffees')
 const PRODUCTS = require('../../../data/products')
 
-const result = categorizeData(PRODUCTS, 'category')
+const result = groupData(PRODUCTS, 'category')
 console.log(result)
 
 fs.writeFile(

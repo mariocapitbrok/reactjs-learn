@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <SearchInput />
       <ToogleOption />
-      <Table id="my-table" data={data} headers={headers} />
+      <Table id="my-table" data={data} />
     </div>
   )
 }

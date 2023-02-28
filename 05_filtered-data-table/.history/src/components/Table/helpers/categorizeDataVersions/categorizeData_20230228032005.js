@@ -1,4 +1,4 @@
-function categorizeData(data, categoryFieldName) {
+function groupData(data, categoryFieldName) {
   const categories = []
 
   data.forEach(item => {
@@ -26,4 +26,4 @@ function categorizeData(data, categoryFieldName) {
   return categories
 }
 
-module.exports = categorizeData
+module.exports = groupData

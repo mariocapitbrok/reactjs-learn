@@ -24,6 +24,7 @@ categories.forEach(c => {
 })
 
 const data = [...rows]
+console.log(data)
 
 function App() {
   return (

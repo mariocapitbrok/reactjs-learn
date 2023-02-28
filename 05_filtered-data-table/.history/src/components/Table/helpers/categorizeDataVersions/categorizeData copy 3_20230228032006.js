@@ -1,4 +1,4 @@
-function categorizeData(data, categoryFieldName) {
+function groupData(data, categoryFieldName) {
   const categories = []
 
   data.forEach(item => {
@@ -15,9 +15,13 @@ function categorizeData(data, categoryFieldName) {
           items: [item],
           itemsCount: 1,
         })
+
+        delete item[categoryFieldName]
       } else {
         categories[index].items.push(item)
         categories[index].itemsCount += 1
+
+        delete item[categoryFieldName]
       }
     } else {
       categoryValue.forEach(value => {
@@ -31,23 +35,19 @@ function categorizeData(data, categoryFieldName) {
             items: [item],
             itemsCount: 1,
           })
+
+          delete item[categoryFieldName]
         } else {
           categories[index].items.push(item)
           categories[index].itemsCount += 1
+
+          delete item[categoryFieldName]
         }
       })
     }
   })
 
-  const categoriesB = categories.map(category => ({
-    ...category,
-    items: category.items.map(item => {
-      const { [categoryFieldName]: ignored, ...rest } = item
-      return rest
-    }),
-  }))
-
-  return categoriesB
+  return categories
 }
 
-module.exports = categorizeData
+module.exports = groupData

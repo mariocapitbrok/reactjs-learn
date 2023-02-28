@@ -23,7 +23,7 @@ categories.forEach(c => {
   rows.push(...items.map(i => ({ name: i.name, price: i.price })))
 })
 
-const data = [...rows]
+const data = [headers, ...rows]
 
 function App() {
   return (

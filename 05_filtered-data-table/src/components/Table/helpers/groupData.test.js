@@ -1,4 +1,4 @@
-const categorizeData = require('./categorizeData')
+const groupData = require('./groupData')
 
 test('when categoryValue is NOT an array', () => {
   const data = [
@@ -31,7 +31,7 @@ test('when categoryValue is NOT an array', () => {
     },
   ]
 
-  const result = categorizeData(data, 'category')
+  const result = groupData(data, 'category')
   expect(result).toEqual(sample)
 })
 
@@ -694,6 +694,6 @@ test('when categoryValue is an array', () => {
     },
   ]
 
-  const result = categorizeData(coffees, 'ingredients')
+  const result = groupData(coffees, 'ingredients')
   expect(result).toEqual(sample)
 })
