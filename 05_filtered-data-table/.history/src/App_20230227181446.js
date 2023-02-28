@@ -1,0 +1,18 @@
+import SearchInput from './components/SearchInput'
+import ToogleOption from './components/ToogleOption'
+import Table from './components/Table'
+import DATA from './components/Table/data'
+const PRODUCTS = require('./data/products')
+import './App.css'
+
+function App() {
+  return (
+    <div className="App">
+      <SearchInput />
+      <ToogleOption />
+      <Table id="my-table" data={PRODUCTS} />
+    </div>
+  )
+}
+
+export default App

@@ -1,0 +1,51 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMaximize, faTableList } from '@fortawesome/free-solid-svg-icons'
+import TableHead from './Table/TableHead'
+import '../App.css'
+
+function Table({ id, data }) {
+  return (
+    <>
+      <div className="header-menu">
+        <button className="densityBtn">
+          <FontAwesomeIcon icon={faTableList} />
+        </button>
+        <button className="fullScreenBtn">
+          <FontAwesomeIcon icon={faMaximize} />
+        </button>
+      </div>
+      <table id={id}>
+        <TableHead data={data} />
+        <TableBody data={data} />
+      </table>
+    </>
+  )
+}
+
+export default Table
+
+function TableBody({ data }) {
+  const tableRows = createRows(data)
+
+  return <tbody>{tableRows}</tbody>
+}
+
+function createRows(data) {
+  return data.map(row => {
+    const cells = createCells(row)
+    return <tr key={row.id || createUniqueId()}>{cells}</tr>
+  })
+}
+
+function createCells(row) {
+  return Object.entries(row).map(([key, value]) => (
+    <td key={row.id ? `${row.id}-${key}` : createUniqueId()} className={key}>
+      {value}
+    </td>
+  ))
+}
+
+function createUniqueId() {
+  const randomStr = Math.random().toString(36).slice(2, 11)
+  return `${randomStr}`
+}
