@@ -13,7 +13,7 @@ const headers = {
 
 let rows = []
 const categories = categorizeData(products, 'category').map(i => ({
-  category: `${i.itemsCount} ${i.category}`,
+  category: `${i.category}: ${i.itemsCount}`,
   itemsCount: ``,
   items: i.items,
 }))

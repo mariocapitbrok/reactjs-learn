@@ -10,20 +10,16 @@ const headers = {
   name: null,
   price: null,
 }
-
-let rows = []
 const categories = categorizeData(products, 'category').map(i => ({
-  category: `${i.itemsCount} ${i.category}`,
+  category: `${i.category}: ${i.itemsCount}`,
   itemsCount: ``,
   items: i.items,
 }))
-categories.forEach(c => {
-  const { items, ...rest } = c
-  rows.push({ ...rest })
-  rows.push(...items.map(i => ({ name: i.name, price: i.price })))
-})
 
-const data = [...rows]
+const data = categories.map(c => {
+  const items = c.items
+  return [c, ...items]
+})
 console.log(data)
 
 function App() {
@@ -31,7 +27,7 @@ function App() {
     <div className="App">
       <SearchInput />
       <ToogleOption />
-      <Table id="my-table" data={data} headers={headers} />
+      <Table id="my-table" data={categories} headers={headers} />
     </div>
   )
 }

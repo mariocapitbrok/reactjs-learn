@@ -8,8 +8,8 @@ export default Head
 
 function createHeaders(data, headers) {
   if (headers !== undefined) {
-    const headerCells = Object.entries(headers).map(([key, value]) => (
-      <th key={key} className={key} title={value}>
+    const headerCells = Object.keys(headers).map(key => (
+      <th key={key} className={key}>
         {key}
       </th>
     ))

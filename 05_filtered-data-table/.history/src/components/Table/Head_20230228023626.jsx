@@ -8,8 +8,9 @@ export default Head
 
 function createHeaders(data, headers) {
   if (headers !== undefined) {
+    console.log('not undefined')
     const headerCells = Object.entries(headers).map(([key, value]) => (
-      <th key={key} className={key} title={value}>
+      <th key={key} className={key}>
         {key}
       </th>
     ))

@@ -1,0 +1,18 @@
+function Head({ data }) {
+  const tableHeaders = createHeaders(data)
+
+  return <thead>{tableHeaders}</thead>
+}
+
+export default Head
+
+function createHeaders(data) {
+  const entries = Object.entries(data[0])
+  const headerCells = entries.map(([key, value]) => (
+    <th key={key} className={key}>
+      {key}
+    </th>
+  ))
+
+  return <tr>{headerCells}</tr>
+}

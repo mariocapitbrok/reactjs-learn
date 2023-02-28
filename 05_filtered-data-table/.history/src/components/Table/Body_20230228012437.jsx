@@ -25,7 +25,7 @@ function createCells(row) {
         </td>
       )
     } else {
-      return null
+      return console.log('is an array')
     }
   })
 }

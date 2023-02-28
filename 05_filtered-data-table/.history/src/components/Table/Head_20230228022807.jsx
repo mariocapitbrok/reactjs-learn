@@ -7,15 +7,7 @@ function Head({ data, headers }) {
 export default Head
 
 function createHeaders(data, headers) {
-  if (headers !== undefined) {
-    const headerCells = Object.entries(headers).map(([key, value]) => (
-      <th key={key} className={key} title={value}>
-        {key}
-      </th>
-    ))
-
-    return <tr>{headerCells}</tr>
-  } else {
+  if (!headers) {
     const entries = Object.entries(data[0])
     const headerCells = entries.map(([key, value]) => {
       if (!Array.isArray(value)) {
@@ -30,5 +22,11 @@ function createHeaders(data, headers) {
     })
 
     return <tr>{headerCells}</tr>
+  } else {
+    const headerCells = Object.keys(headers).map(key => (
+      <th key={key} className={key}>
+        {key}
+      </th>
+    ))
   }
 }

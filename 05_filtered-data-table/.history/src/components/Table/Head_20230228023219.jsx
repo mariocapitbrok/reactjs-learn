@@ -6,10 +6,10 @@ function Head({ data, headers }) {
 
 export default Head
 
-function createHeaders(data, headers) {
-  if (headers !== undefined) {
-    const headerCells = Object.entries(headers).map(([key, value]) => (
-      <th key={key} className={key} title={value}>
+function createHeaders(data, headers = null) {
+  if (headers) {
+    const headerCells = Object.keys(headers).map(key => (
+      <th key={key} className={key}>
         {key}
       </th>
     ))

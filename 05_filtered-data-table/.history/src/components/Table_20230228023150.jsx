@@ -2,7 +2,7 @@ import TopMenu from './Table/TopMenu'
 import DataTable from './Table/DataTable'
 import '../App.css'
 
-function Table({ id, data, headers }) {
+function Table({ id, data, headers = null }) {
   return (
     <>
       <TopMenu />

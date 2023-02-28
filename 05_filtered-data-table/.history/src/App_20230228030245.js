@@ -10,20 +10,20 @@ const headers = {
   name: null,
   price: null,
 }
-
-let rows = []
 const categories = categorizeData(products, 'category').map(i => ({
-  category: `${i.itemsCount} ${i.category}`,
+  category: `${i.category}: ${i.itemsCount}`,
   itemsCount: ``,
   items: i.items,
 }))
+
+let categoryRows = []
+
 categories.forEach(c => {
   const { items, ...rest } = c
-  rows.push({ ...rest })
-  rows.push(...items.map(i => ({ name: i.name, price: i.price })))
+  categoryRows.push({ ...rest })
 })
 
-const data = [...rows]
+const data = [...categoryRows]
 console.log(data)
 
 function App() {

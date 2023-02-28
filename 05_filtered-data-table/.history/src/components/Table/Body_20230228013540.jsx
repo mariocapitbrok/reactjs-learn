@@ -25,6 +25,7 @@ function createCells(row) {
         </td>
       )
     } else {
+      createRows(value)
       return null
     }
   })

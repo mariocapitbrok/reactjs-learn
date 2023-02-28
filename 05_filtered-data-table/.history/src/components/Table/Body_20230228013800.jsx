@@ -25,6 +25,7 @@ function createCells(row) {
         </td>
       )
     } else {
+      console.log('create new row here for', value)
       return null
     }
   })
