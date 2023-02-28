@@ -1,0 +1,22 @@
+import PropTypes from 'prop-types'
+const createUniqueKey = require('./helpers/createUniqueKey')
+
+function THead({ children, jsxHeaderRows, ...restProps }) {
+  return (
+    <thead key={createUniqueKey()} {...restProps}>
+      {children}
+    </thead>
+  )
+}
+
+export default THead
+
+/* THead.propTypes = {
+  key: PropTypes.string,
+  jsxHeaderRows: PropTypes.array,
+  ...PropTypes.objectOf(PropTypes.any),
+}
+
+THead.defaultProps = {
+  className: 'capitbrok',
+} */
